@@ -1,0 +1,144 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  color:#222;
+  background:#f7fff8;
+}
+
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600');
+
+  background-size:cover;
+  background-position:center;
+  color:white;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:bold;
+  color:#7dff92;
+}
+
+nav ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+}
+
+.hero-content{
+  height:85vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero-content h1{
+  font-size:58px;
+  margin-bottom:20px;
+}
+
+.hero-content p{
+  font-size:22px;
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:15px;
+}
+
+.btn{
+  background:#16a34a;
+  color:white;
+  padding:14px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.whatsapp{
+  background:#25D366;
+}
+
+.section{
+  padding:90px 8%;
+  text-align:center;
+}
+
+.section h2{
+  font-size:42px;
+  margin-bottom:40px;
+  color:#166534;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.about p,
+.contact p{
+  max-width:800px;
+  margin:20px auto;
+  line-height:1.8;
+  font-size:18px;
+}
+
+footer{
+  background:#166534;
+  color:white;
+  text-align:center;
+  padding:25px;
+}
+
+@media(max-width:768px){
+
+  nav{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .hero-content h1{
+    font-size:38px;
+  }
+
+  .hero-content p{
+    font-size:18px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+}
