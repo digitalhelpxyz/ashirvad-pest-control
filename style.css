@@ -4,65 +4,78 @@
   box-sizing:border-box;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   font-family:Arial,sans-serif;
-  color:#222;
   background:#f7fff8;
+  color:#222;
 }
 
 .hero{
   height:100vh;
+
   background:
-  linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  linear-gradient(rgba(0,0,0,0.55),
+  rgba(0,0,0,0.55)),
+
   url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600');
 
   background-size:cover;
   background-position:center;
+
   color:white;
 }
 
-nav{
+.navbar{
   display:flex;
   justify-content:space-between;
   align-items:center;
+
   padding:20px 8%;
 }
 
 .logo{
-  font-size:28px;
+  font-size:30px;
   font-weight:bold;
-  color:#7dff92;
+  color:#8effa1;
 }
 
-nav ul{
+.nav-links{
   display:flex;
-  gap:25px;
   list-style:none;
+  gap:25px;
 }
 
-nav a{
+.nav-links a{
   color:white;
   text-decoration:none;
+  font-size:17px;
 }
 
 .hero-content{
   height:85vh;
+
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
+
   text-align:center;
   padding:20px;
 }
 
 .hero-content h1{
-  font-size:58px;
+  font-size:60px;
+  max-width:900px;
   margin-bottom:20px;
 }
 
 .hero-content p{
   font-size:22px;
-  margin-bottom:30px;
+  margin-bottom:35px;
 }
 
 .hero-buttons{
@@ -74,7 +87,7 @@ nav a{
   background:#16a34a;
   color:white;
   padding:14px 28px;
-  border-radius:30px;
+  border-radius:35px;
   text-decoration:none;
   font-weight:bold;
 }
@@ -90,29 +103,47 @@ nav a{
 
 .section h2{
   font-size:42px;
-  margin-bottom:40px;
   color:#166534;
+  margin-bottom:50px;
 }
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
   gap:25px;
 }
 
 .card{
   background:white;
-  padding:30px;
-  border-radius:18px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  padding:35px 25px;
+
+  border-radius:20px;
+
+  box-shadow:
+  0 6px 18px rgba(0,0,0,0.08);
+
+  transition:0.3s;
 }
 
-.about p,
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.card h3{
+  margin-bottom:15px;
+  color:#166534;
+}
+
+.card p{
+  line-height:1.7;
+}
+
 .contact p{
-  max-width:800px;
-  margin:20px auto;
-  line-height:1.8;
   font-size:18px;
+  margin-bottom:20px;
 }
 
 footer{
@@ -122,10 +153,41 @@ footer{
   padding:25px;
 }
 
+.floating-whatsapp{
+  position:fixed;
+
+  bottom:20px;
+  right:20px;
+
+  width:60px;
+  height:60px;
+
+  background:#25D366;
+  color:white;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-decoration:none;
+  font-size:28px;
+
+  box-shadow:
+  0 5px 15px rgba(0,0,0,0.3);
+
+  z-index:1000;
+}
+
 @media(max-width:768px){
 
-  nav{
+  .navbar{
     flex-direction:column;
+    gap:15px;
+  }
+
+  .nav-links{
     gap:15px;
   }
 
@@ -139,6 +201,10 @@ footer{
 
   .hero-buttons{
     flex-direction:column;
+  }
+
+  .section h2{
+    font-size:32px;
   }
 
 }
